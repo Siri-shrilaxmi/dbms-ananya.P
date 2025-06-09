@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Brokers List</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h1>Registered Brokers</h1>
+    <a href="/add_broker">+ Add Broker</a>
+    <div class="container">
+        {% for broker in brokers %}
+            <div class="card">
+                <h2>{{ broker.name }}</h2>
+                <p>Email: {{ broker.email }}</p>
+                <p>Phone: {{ broker.phone }}</p>
+            </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
